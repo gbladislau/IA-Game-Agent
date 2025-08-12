@@ -3,11 +3,11 @@ from game.core import SurvivalGame, GameConfig
 from game.agents import NeuralNetworkAgent
 import os
 
-def test_agent(weights: np.ndarray, num_tests: int = 30, render: bool = False):
+def test_agent(weights: np.ndarray, num_tests: int = 30, render: bool = True):
     print(f"\n--- Testando Agente Treinado por {num_tests} vezes ---")
     
     # Configurações do jogo para o teste
-    game_config = GameConfig(render_grid=False)
+    game_config = GameConfig(render_grid=True)
 
     total_scores = []
 
@@ -37,4 +37,4 @@ def test_agent(weights: np.ndarray, num_tests: int = 30, render: bool = False):
 if __name__ == "__main__":
     best_trained_weights = np.load('best_weights.npy') 
 
-    test_agent(best_trained_weights, num_tests=30, render=False)
+    test_agent(best_trained_weights, num_tests=30, render=True)
