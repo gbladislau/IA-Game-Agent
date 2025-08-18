@@ -11,7 +11,7 @@ import multiprocessing as mp
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 POPULATION_SIZE = 100
-GENERATIONS = 1000
+GENERATIONS = 5000
 RENDER = False
 FPS = 60
 
@@ -61,7 +61,7 @@ def train_and_test():
     
     bats = BAT_Algorithm(
         population_size=POPULATION_SIZE,
-        bats_lenght=27*32 + 24*32 + 24*3 + (32+ 24 +3),  # quantidade de pesos da rede
+        bats_lenght=27*32 + 16*32 + 16*3 + (32+ 16 +3),  # quantidade de pesos da rede
         fmin=0,
         fmax=10,
     )

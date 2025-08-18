@@ -18,7 +18,7 @@ class HumanAgent(Agent):
         return 0  # Padrão: não fazer nada (será sobrescrito pela entrada do usuário no manual_play.py)
 
 class NeuralNetworkAgent(Agent):
-    def __init__(self, config:GameConfig, weights:np.ndarray, n_neuronios_l1=32, n_neuronios_l2=24, n_neuronios_out=3):
+    def __init__(self, config:GameConfig, weights:np.ndarray, n_neuronios_l1=32, n_neuronios_l2=16, n_neuronios_out=3):
         self.config = config
         
         tamanho_entrada = config.sensor_grid_size * config.sensor_grid_size + 2
